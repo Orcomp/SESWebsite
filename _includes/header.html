@@ -1,0 +1,41 @@
+    <!-- TOP NAV -->
+    <header id="topNav" style="height:90px;">
+      <div class="container">
+
+        <!-- Mobile Menu Button -->
+        <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Logo text or image -->
+        <a class="logo" href="index.html">
+          <img src="{{ "/assets/images/logo.png" | prepend: site.url }}" alt="Atropos" style="Height: 50px; margin-left:20px;" />
+        </a>
+
+        <!-- Top Nav -->
+        <div class="navbar-collapse nav-main-collapse collapse pull-right">
+          <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main scroll-menu" id="topMain">
+              <li>
+                <a href="{{ site.url }}"><b>Home</b></a>
+              </li>
+              {% for page in site.pages %}
+                {% if page.title %}
+                  <li>
+                      <a href="{{ page.url | prepend: site.url }}">{{ page.title }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+        <!-- /Top Nav -->
+
+      </div>
+    </header>
+    <span id="header_shadow" style="top: 111px;"></span>
+    <!-- /TOP NAV -->
+    </div>
+  </div>
+
+</header>
