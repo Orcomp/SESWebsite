@@ -13,7 +13,26 @@ header-services:
 header-title: "At the Vanguard of Innovation"
 header-description: "Phasellus viverra nulla ut metus varius laoreet rutrum. Aenean imperdiet etiam ultricies nisi vel augue."
 services-button-title: "Learn More"
-
+features-title: "What do we do?"
+features:
+    - title: "Cloud Computing"
+      description: "Praesentium cumque voluptate harum quae doloribus, atque error debitis, amet velit in similique, necessitatibus odit vero sunt."
+      icon: "fa-cloud"
+    - title: "Web Design and SEO"
+      description: "Praesentium cumque voluptate harum quae doloribus, atque error debitis, amet velit in similique, necessitatibus odit vero sunt."
+      icon: "fa-desktop"
+    - title: "Mobile and Tablet Apps"
+      description: "Praesentium cumque voluptate harum quae doloribus, atque error debitis, amet velit in similique, necessitatibus odit vero sunt."
+      icon: "fa-tablet"
+    - title: "Training and development"
+      description: "Praesentium cumque voluptate harum quae doloribus, atque error debitis, amet velit in similique, necessitatibus odit vero sunt."
+      icon: "fa-graduation-cap"
+    - title: "Customer service"
+      description: "Praesentium cumque voluptate harum quae doloribus, atque error debitis, amet velit in similique, necessitatibus odit vero sunt."
+      icon: "fa-paper-plane-o"
+    - title: "Mobile and Tablet Apps"
+      description: "Praesentium cumque voluptate harum quae doloribus, atque error debitis, amet velit in similique, necessitatibus odit vero sunt."
+      icon: "fa-tablet"
 # create a page with icon list for Andrew
 ---
 <header class="services-header">
@@ -43,62 +62,19 @@ services-button-title: "Learn More"
     <section class="margin-bottom">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="right-line">What do we do?</h2>
+                <h2 class="right-line">{{page.features-title}}</h2>
             </div>
+            {% for service in page.features %}
             <div class="col-md-4 col-sm-6">
                 <div class="text-icon wow fadeInUp animated" style="visibility: visible; -webkit-animation: fadeInUp;">
-                    <span class="icon-ar icon-ar-lg"><i class="fa fa-cloud"></i></span>
+                    <span class="icon-ar icon-ar-lg"><i class="fa {{service.icon}}"></i></span>
                     <div class="text-icon-content">
-                        <h3 class="no-margin">Cloud Computing</h3>
-                        <p>Praesentium cumque voluptate harum quae doloribus, atque error debitis, amet velit in similique, necessitatibus odit vero sunt.</p>
+                        <h3 class="no-margin">{{service.title}}</h3>
+                        <p>{{service.description}}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="text-icon wow fadeInUp animated" style="visibility: visible; -webkit-animation: fadeInUp;">
-                    <span class="icon-ar icon-ar-lg"><i class="fa fa-desktop"></i></span>
-                    <div class="text-icon-content">
-                        <h3 class="no-margin">Web Design and SEO</h3>
-                        <p>Praesentium cumque voluptate harum quae doloribus, atque error debitis, amet velit in similique, necessitatibus odit vero sunt.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="text-icon wow fadeInUp animated" style="visibility: visible; -webkit-animation: fadeInUp;">
-                    <span class="icon-ar icon-ar-lg"><i class="fa fa-tablet"></i></span>
-                    <div class="text-icon-content">
-                        <h3 class="no-margin">Mobile and Tablet Apps</h3>
-                        <p>Praesentium cumque voluptate harum quae doloribus, atque error debitis, amet velit in similique, necessitatibus odit vero sunt.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="text-icon wow fadeInUp animated" style="visibility: visible; -webkit-animation: fadeInUp;">
-                    <span class="icon-ar icon-ar-lg"><i class="fa fa-wordpress"></i></span>
-                    <div class="text-icon-content">
-                        <h3 class="no-margin">Wordpress Themes</h3>
-                        <p>Praesentium cumque voluptate harum quae doloribus, atque error debitis, amet velit in similique, necessitatibus odit vero sunt.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="text-icon wow fadeInUp animated" style="visibility: visible; -webkit-animation: fadeInUp;">
-                    <span class="icon-ar icon-ar-lg"><i class="fa fa-graduation-cap"></i></span>
-                    <div class="text-icon-content">
-                        <h3 class="no-margin">Training and development</h3>
-                        <p>Praesentium cumque voluptate harum quae doloribus, atque error debitis, amet velit in similique, necessitatibus odit vero sunt.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="text-icon wow fadeInUp animated" style="visibility: visible; -webkit-animation: fadeInUp;">
-                    <span class="icon-ar icon-ar-lg"><i class="fa fa-paper-plane-o"></i></span>
-                    <div class="text-icon-content">
-                        <h3 class="no-margin">Customer service</h3>
-                        <p>Praesentium cumque voluptate harum quae doloribus, atque error debitis, amet velit in similique, necessitatibus odit vero sunt.</p>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- row -->
+            {% endfor %}
+        </div>
     </section>
 </div>
