@@ -1,5 +1,20 @@
 ---
 layout: default
+header-services:
+    - title: "Advanced Planning and Scheduling Solutions"
+      icon: "fa-globe"
+      delay: 5
+    - title: "High-speed servers and performance"
+      icon: "fa-tachometer"
+      delay: 8
+    - title: "Lorem ipsum dolor sit amet consectetur"
+      icon: "fa-cloud"
+      delay: 11
+header-title: "At the Vanguard of Innovation"
+header-description: "Phasellus viverra nulla ut metus varius laoreet rutrum. Aenean imperdiet etiam ultricies nisi vel augue."
+services-button-title: "Learn More"
+
+# create a page with icon list for Andrew
 ---
 <header class="services-header">
     <div class="primary-dark-div">
@@ -7,16 +22,16 @@ layout: default
             <div class="row">
                 <div class="col-md-6">
                     <div class="service-header-text text-center center-block">
-                        <h1 class="animated fadeInDown animation-delay-2">At the Vanguard of Innovation</h1>
-                        <p class="animated fadeInDown animation-delay-5">Phasellus viverra nulla ut metus varius laoreet rutrum. Aenean imperdiet etiam ultricies nisi vel augue.</p>
-                        <p class="animated fadeInDown animation-delay-8"><a href="#" class="btn btn-ar btn-primary btn-lg">Learn More</a></p>
+                        <h1 class="animated fadeInDown animation-delay-2">{{page.header-title}}</h1>
+                        <p class="animated fadeInDown animation-delay-5">{{page.header-description}}</p>
+                        <p class="animated fadeInDown animation-delay-8"><a href="{{ "/services" | prepend: site.url }}" class="btn btn-ar btn-primary btn-lg">{{page.services-button-title}}</a></p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <ul class="services-header-list">
-                        <li class="animated fadeInUp animation-delay-5"><a href="#"><i class="fa fa-globe"></i> Advanced Planning and Scheduling Solutions</a></li>
-                        <li class="animated fadeInUp animation-delay-8"><a href="#"><i class="fa fa-tachometer"></i> High-speed servers and performance</a></li>
-                        <li class="animated fadeInUp animation-delay-11"><a href="#"><i class="fa fa-cloud"></i> Lorem ipsum dolor sit amet consectetur</a></li>
+                        {% for service in page.header-services %}
+                        <li class="animated fadeInUp animation-delay-{{service.delay}}"><a href="#"><i class="fa {{service.icon}}"></i> {{service.title}}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
