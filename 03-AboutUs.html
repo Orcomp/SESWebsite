@@ -3,34 +3,41 @@ layout: default
 title: About Us
 permalink: /about/
 ---
-<header id="page-title">
+<header class="main-header">
     <div class="container">
-        <h1>{{ page.title }}</h1>
+        <h1 class="page-title">{{page.title}}</h1>
 
-        <ul class="breadcrumb">
+        <ol class="breadcrumb pull-right">
             <li><a href="{{ site.url }}">Home</a></li>
-            <li class="active">{{ page.title }}</li>
-        </ul>
+            <li class="active">{{page.title}}</li>
+        </ol>
     </div>
 </header>
+
 <section class="container">
-    <article>
-        <h2>Welcome to WidlGums</h2>
-        <p>Sed ut perspiciatis unde omnis <strong>iste natus error</strong> sit voluptatem accusantium <em>doloremque laudantium</em>, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia <a href="#">voluptas sit aspernatur</a> aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut <strong>labore dolore magnm</strong> aliquam quaerat voluptatem.</p>
-        <p class="lead">Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
-    </article>
-    <div class="divider"><!-- divider -->
-        <i class="fa fa-star"></i>
+    <div class="row">
+        <div class="col-xs-12">
+            <p class="slogan text-center animated bounceInLeft animation-delay-12">Discover our jobs and the rigorous process of <span>creation</span>. <br> Our principles are <span>creativity</span>, <span>experience</span> and <span>knowledge</span>.</p>
+            <h1 class="right-line no-margin-top">About us</h1>
+        </div>
     </div>
+    <article>
+        <p>Simply Effective Solution Pty Ltd is an Australian company formed in 2014 to provide management consulting services and software products in the fields of computer simulation and scheduling.</br></br>
+
+        We have successfully completed projects, improving the efficiency and profitability of companies in Australia, Africa, China, Middle East, New Zealand, North America South East Asia, and South America.</p>
+    </article>
+
+
     <article class="row">
         <div class="col-md-6">
             <img class="img-responsive" src="{{ "/assets/images/WildGums/AboutUs.jpg" | prepend: site.url }}" width="555" height="311" alt="">
         </div>
         <div class="col-md-6">
-            <h3>WildGums : Plan your manufacture</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore dolore magnm aliquam quaerat voluptatem.</p>
+            <h3>Simply Effective Solution</h3>
+            <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</br></br>
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</br></br>
+            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore dolore magnm aliquam quaerat voluptatem.</p>
         </div>
     </article>
 </section>
