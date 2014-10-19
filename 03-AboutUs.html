@@ -2,6 +2,20 @@
 layout: default
 title: About Us
 permalink: /about/
+about-us-title: "Discover our jobs and the rigorous process of <span>creation</span>. <br> Our principles are <span>creativity</span>, <span>experience</span> and <span>knowledge</span>."
+
+# Note: if you want to highlight a text, put it into <span>Your text</strong> tag.
+# Note: if you want add multiline description, use </br> as a break line symbol
+
+about-us-header: "About us"
+about-us-description-p1: "Simply Effective Solution Pty Ltd is an Australian company formed in 2014 to provide management consulting services and software products in the fields of computer simulation and scheduling."
+about-us-description-p2: "We have successfully completed projects, improving the efficiency and profitability of companies in Australia, Africa, China, Middle East, New Zealand, North America South East Asia, and South America."
+
+about-us-content-header: "Simply Effective Solution"
+about-us-content-description-p1: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+about-us-content-description-p2: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+about-us-content-description-p3: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore dolore magnm aliquam quaerat voluptatem."
+
 ---
 <header class="main-header">
     <div class="container">
@@ -17,27 +31,25 @@ permalink: /about/
 <section class="container">
     <div class="row">
         <div class="col-xs-12">
-            <p class="slogan text-center animated bounceInLeft animation-delay-12">Discover our jobs and the rigorous process of <span>creation</span>. <br> Our principles are <span>creativity</span>, <span>experience</span> and <span>knowledge</span>.</p>
-            <h1 class="right-line no-margin-top">About us</h1>
+            <p class="slogan text-center animated bounceInLeft animation-delay-12">{{page.about-us-title}}</p>
+            <h1 class="right-line no-margin-top">{{page.about-us-header}}</h1>
         </div>
     </div>
     <article>
-        <p>Simply Effective Solution Pty Ltd is an Australian company formed in 2014 to provide management consulting services and software products in the fields of computer simulation and scheduling.</br></br>
+        <p>{{page.about-us-description-p1}}</p>
 
-        We have successfully completed projects, improving the efficiency and profitability of companies in Australia, Africa, China, Middle East, New Zealand, North America South East Asia, and South America.</p>
+        <p>{{page.about-us-description-p2}}</p>
     </article>
-
 
     <article class="row">
         <div class="col-md-6">
             <img class="img-responsive" src="{{ "/img/AboutUs.jpg" | prepend: site.url }}" width="555" height="311" alt="">
         </div>
         <div class="col-md-6">
-            <h3>Simply Effective Solution</h3>
-            <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</br></br>
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</br></br>
-            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore dolore magnm aliquam quaerat voluptatem.</p>
+            <h3>{{page.about-us-content-header}}</h3>
+            <p>{{page.about-us-content-description-p1}}</p>
+            <p>{{page.about-us-content-description-p2}}</p>
+            <p>{{page.about-us-content-description-p3}}</p>
         </div>
     </article>
 </section>
