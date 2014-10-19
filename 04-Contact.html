@@ -2,6 +2,18 @@
 layout: default
 title: Contact
 permalink: /contact/
+
+contact-header: "Send Message"
+contact-description: "Lorem ipsum Ex aliqua tempor nisi laboris dolor id laborum irure minim tempor in sit dolore amet sit esse nostrud tempor nulla consequat aute in nostrud laboris sint ullamco amet nisi pariatur officia nulla pariatur in id et labore dolore ad sit."
+
+contact-information-header: "Additional Information"
+contact-information-content-header: "Contacts"
+contact-information-content-company-name: "Open Mind, Inc."
+contact-information-content-company-address: "795 Folsom Ave, Suite 600<br> San Francisco, CA 94107"
+# Note: if you want add multiline description, use </br> as a break line symbol.
+
+contact-information-content-company-phone: "(123) 456-7890"
+contact-information-content-company-email: "support@openmid.com"
 ---
 <header class="main-header">
     <div class="container">
@@ -17,11 +29,11 @@ permalink: /contact/
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h2 class="section-title no-margin-top">Send Message</h2>
+            <h2 class="section-title no-margin-top">{{page.contact-header}}</h2>
         </div>
         <div class="col-md-8">
             <section>
-                <p>Lorem ipsum Ex aliqua tempor nisi laboris dolor id laborum irure minim tempor in sit dolore amet sit esse nostrud tempor nulla consequat aute in nostrud laboris sint ullamco amet nisi pariatur officia nulla pariatur in id et labore dolore ad sit.</p>
+                <p>{{page.contact-description}}</p>
 
                 <form role="form">
                     <div class="form-group">
@@ -45,24 +57,15 @@ permalink: /contact/
         <div class="col-md-4">
             <section>
                 <div class="panel panel-primary">
-                    <div class="panel-heading"><i class="fa fa-envelope-o"></i> Additional Information</div>
+                    <div class="panel-heading"><i class="fa fa-envelope-o"></i>{{page.contact-information-header}}</div>
                     <div class="panel-body">
-                        <h4 class="section-title no-margin-top">Contacts</h4>
+                        <h4 class="section-title no-margin-top">{{page.contact-information-content-header}}</h4>
                         <address>
-                            <strong>Open Mind, Inc.</strong><br>
-                            795 Folsom Ave, Suite 600<br>
-                            San Francisco, CA 94107<br>
-                            <abbr title="Phone">P:</abbr> (123) 456-7890 <br>
-                            Mail: <a href="#">support@openmid.com</a>
+                            <strong>{{page.contact-information-content-company-name}}</strong><br>
+                            {{page.contact-information-content-company-address}}<br>
+                            <abbr title="Phone">P:</abbr>{{page.contact-information-content-company-phone}}<br>
+                            Mail: <a href="#">{{page.contact-information-content-company-email}}</a>
                         </address>
-
-                        <!-- Business Hours -->
-                        <h4 class="section-title no-margin-top">Business Hours</h4>
-                        <ul class="list-unstyled">
-                            <li><strong>Monday-Friday:</strong> 9am to 7pm</li>
-                            <li><strong>Saturday:</strong> 9am to 2pm</li>
-                            <li><strong>Sunday:</strong> Closed</li>
-                        </ul>
                     </div>
                 </div>
             </section>
