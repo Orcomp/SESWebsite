@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<!--[if IE 8]>      <html class="ie ie8"> <![endif]-->
-<!--[if IE 9]>      <html class="ie ie9"> <![endif]-->
-<!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8" />
-
+<html lang="en">
   {% include head.html %}
 
     <body class="boxed">
+      <div id="sb-site">
+      <div class="boxed">
+
       {% include header.html %}
 
-    <!-- WRAPPER -->
-      <div id="wrapper">
-        {{ content }}
-      </div>
-    <!-- /WRAPPER -->
+      {{ content }}
+
       {% include footer.html %}
+      </div> <!-- boxed -->
+      </div> <!-- sb-site -->
     </body>
 </html>
