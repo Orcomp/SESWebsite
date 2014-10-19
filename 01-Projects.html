@@ -2,6 +2,34 @@
 layout: default
 title: Projects
 permalink: /projects/
+project-header: "Simulation and Scheduling"
+project-subheader: "Consulting Projects"
+projects:
+    - header: "Manufacturing"
+      image: "/img/demo/intel.png"
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil."
+    - header: "Airports"
+      image: "/img/demo/microsoft.png"
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil."
+    - header: "Materials Handling"
+      image: "/img/demo/nokia.png"
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil."
+    - header: "Mining"
+      image: "/img/demo/maxis.png"
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil."
+    - header: "LNG"
+      image: "/img/demo/nokia.png"
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil."
+    - header: "Ports"
+      image: "/img/demo/intel.png"
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil."
+    - header: "Smelting"
+      image: "/img/demo/microsoft.png"
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil."
+    - header: "Warehousing"
+      image: "/img/demo/nokia.png"
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil."
+
 ---
 <header class="main-header">
     <div class="container">
@@ -17,93 +45,23 @@ permalink: /projects/
     <section class="margin-bottom">
         <div class="row">
             <div class="col-md-12">
-                <p class="slogan text-center margin-bottom"><span>Simulation and Scheduling</span> </br>Consulting Projects</p>
+                <p class="slogan text-center margin-bottom"><span>{{page.project-header}}</span> </br>
+                {{page.project-subheader}}</p>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
+              {% for project in page.projects %}
                 <div class="media">
                   <a class="thumbnail pull-left" href="#">
-                    <img class="media-object" src="{{ "/img/demo/intel.png" prepend: site.url}}" alt="...">
+                    <img class="media-object" src="{{ project.image prepend: site.url}}" alt="...">
                   </a>
                   <div class="media-body">
-                    <h2 class="media-heading">Manufacturing</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil.</p>
+                    <h2 class="media-heading">{{project.header}}</h2>
+                    <p>{{project.description}}</p>
                   </div>
                 </div>
-                <div class="media">
-                  <a class="thumbnail pull-left" href="#">
-                    <img class="media-object" src="{{ "/img/demo/microsoft.png" prepend: site.url}}" alt="...">
-                  </a>
-                  <div class="media-body">
-                    <h2 class="media-heading">Airports</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil.</p>
-                  </div>
-                </div>
-                <div class="media">
-                  <a class="thumbnail pull-left" href="#">
-                    <img class="media-object" src="{{ "/img/demo/nokia.png" prepend: site.url}}" alt="...">
-                  </a>
-                  <div class="media-body">
-                    <h2 class="media-heading">Materials Handling</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil.</p>
-                  </div>
-                </div>
-                <div class="media">
-                  <a class="thumbnail pull-left" href="#">
-                    <img class="media-object" src="{{ "/img/demo/sony.png" prepend: site.url}}" alt="...">
-                  </a>
-                  <div class="media-body">
-                    <h2 class="media-heading">Mining</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil.</p>
-                  </div>
-                </div>
-                <div class="media">
-                  <a class="thumbnail pull-left" href="#">
-                    <img class="media-object" src="{{ "/img/demo/samsung.png" prepend: site.url}}" alt="...">
-                  </a>
-                  <div class="media-body">
-                    <h2 class="media-heading">Samsung</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil.</p>
-                  </div>
-                </div>
-                <div class="media">
-                  <a class="thumbnail pull-left" href="#">
-                    <img class="media-object" src="{{ "/img/demo/maxis.png" prepend: site.url}}" alt="...">
-                  </a>
-                  <div class="media-body">
-                    <h2 class="media-heading">LNG</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil.</p>
-                  </div>
-                </div>
-                <div class="media">
-                  <a class="thumbnail pull-left" href="#">
-                    <img class="media-object" src="{{ "/img/demo/intel.png" prepend: site.url}}" alt="...">
-                  </a>
-                  <div class="media-body">
-                    <h2 class="media-heading">Ports</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil.</p>
-                  </div>
-                </div>
-                <div class="media">
-                  <a class="thumbnail pull-left" href="#">
-                    <img class="media-object" src="{{ "/img/demo/microsoft.png" prepend: site.url}}" alt="...">
-                  </a>
-                  <div class="media-body">
-                    <h2 class="media-heading">Smelting</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil.</p>
-                  </div>
-                </div>
-                <div class="media">
-                  <a class="thumbnail pull-left" href="#">
-                    <img class="media-object" src="{{ "/img/demo/nokia.png" prepend: site.url}}" alt="...">
-                  </a>
-                  <div class="media-body">
-                    <h2 class="media-heading">Warehousing</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem illum cum tempora officiis iusto nobis deserunt. Esse error molestiae iste a explicabo suscipit fugit atque quisquam temporibus reiciendis ratione repellat quo accusantium dicta, dignissimos sequi in modi nesciunt, expedita omnis natus. Id qui neque, at autem mollitia commodi earum, suscipit, provident aut nihil.</p>
-                  </div>
-                </div>
-
+              {% endfor %}
             </div>
         </div>
    </section>
