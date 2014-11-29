@@ -5,7 +5,7 @@ copyright-text: ", inc. All rights reserved."
 email: bvautier
 description: "Simply Effective Solutions"
 baseurl: ""
-url: "http://orcomp.github.io/Web.SeSolutions"
+url: "http://www.sesolutions.net.au"
 #host: localhost
 include: [_colorpicker.js, _handlebars.js]
 
