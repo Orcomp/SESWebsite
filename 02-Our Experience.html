@@ -2,42 +2,19 @@
 layout: default
 title: Our Experience
 permalink: /experience/
-experience-header: "Simulation and Scheduling"
-experience-subheader: "Our experience"
-experience-list-title: "experience"
-experience:
-    - description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil suscipit cupiditate expedita hic earum vero sint, recusandae itaque, rem distinctio."
-    - description: "Totam porro sit, obcaecati quos quae iure tenetur, soluta voluptatem sapiente rerum ipsam delectus corporis voluptates voluptate, nulla mollitia pariatur."
-    - description: "Amet dolorum ullam, rerum ratione distinctio, quia iusto rem! Asperiores et quas, ratione in dolores dolorum doloribus magni suscipit labore!"
-    - description: "Enim quas nesciunt sequi odit, ut quisquam vitae commodi animi placeat nihil saepe magnam aliquam, vero harum quae doloribus aut nostrum veniam alias!"
-    - description: "Expedita doloribus vel nam fuga iusto aperiam maxime aut amet pariatur. Libero quidem, optio itaque ducimus. Nulla laboriosam voluptas voluptates."
-accordion:
-    - title: "Talent and creativity"
-      icon: "fa-lightbulb-o"
-      id: "collapseOne"
-      collapse: "collapse in"
-      content-p1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati molestiae id ipsum ipsa repudiandae. Voluptatum, molestias, quas magnam repellat quos facilis sequi. Ullam optio eius deleniti dolore quasi doloribus ipsam incidunt perferendis."
-      content-p2: "Dolores, corrupti, laborum, officia sit aliquam doloremque accusantium nemo sunt veniam est incidunt perferendis minima obcaecati ex aperiam voluptatibus blanditiis eum suscipit magnam dolorum."
-    - title: "Design and code"
-      icon: "fa-desktop"
-      id: "collapseTwo"
-      collapse: "collapse"
-      content-p1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati molestiae id ipsum ipsa repudiandae. Voluptatum, molestias, quas magnam repellat quos facilis sequi. Ullam optio eius deleniti dolore quasi doloribus ipsam incidunt perferendis."
-      content-p2: "Dolores, corrupti, laborum, officia sit aliquam doloremque accusantium nemo sunt veniam est incidunt perferendis minima obcaecati ex aperiam voluptatibus blanditiis eum suscipit magnam dolorum."
-    - title: "Quality and Support"
-      icon: "fa-user"
-      id: "collapseThree"
-      collapse: "collapse"
-      content-p1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati molestiae id ipsum ipsa repudiandae. Voluptatum, molestias, quas magnam repellat quos facilis sequi. Ullam optio eius deleniti dolore quasi doloribus ipsam incidunt perferendis."
-      content-p2: "Dolores, corrupti, laborum, officia sit aliquam doloremque accusantium nemo sunt veniam est incidunt perferendis minima obcaecati ex aperiam voluptatibus blanditiis eum suscipit magnam dolorum."
-experience-box1-icon: "fa-cloud"
-experience-box1-header: "Primary Box"
-experience-box1-description: "Eveniet quo minima deserunt quisquam libero iste veritatis consectetur nulla."
-
-experience-box2-icon: "fa-group"
-experience-box2-header: "Primary Box"
-experience-box2-description: "Eveniet quo minima deserunt quisquam libero iste veritatis consectetur nulla."
+experience-header: "Our consultants have hands on experience in the following <br>industries and functional areas"
+experience-subheader: ""
 ---
+<style>
+  .experience h4 {
+    color:rgb(102, 102, 102);
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .experience ul {
+    font-size: 14px;
+  }
+</style>
 <header class="main-header">
     <div class="container">
         <h1 class="page-title">{{page.title}}</h1>
@@ -49,61 +26,96 @@ experience-box2-description: "Eveniet quo minima deserunt quisquam libero iste v
     </div>
 </header>
 <div class="container">
-    <section class="margin-bottom">
+    <section class="no-margin-bottom">
         <div class="row">
             <div class="col-md-12">
                 <p class="slogan text-center margin-bottom"><span>{{page.experience-header}}</span> </br>
                 {{page.experience-subheader}}</p>
             </div>
         </div>
+    </section>
+    <section class="margin-bottom experience">
         <div class="row">
-            <div class="col-md-6">
-                <h2 class="no-margin-top">{{page.experience-list-title}}</h2>
-                <ol class="service-list list-unstyled">
-                    {% for service in page.experience %}
-                    <li class="wow fadeInUp animated" style="visibility: visible; -webkit-animation: undefined;">
-                        {{service.description}}
-                    </li>
-                    {% endfor %}
-                </ol>
-            </div>
-            <div class="col-md-6">
-                <div class="panel-group" id="accordion">
-                {% for item in page.accordion %}
-                  <div class="panel panel-default wow fadeInUp animated" style="visibility: visible; -webkit-animation: undefined;">
-                    <div class="panel-heading panel-heading-link">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#{{item.id}}">
-                          <i class="fa {{item.icon}}"></i> {{item.title}}
-                        </a>
-                    </div>
-                    <div id="{{item.id}}" class="panel-collapse {{item.collapse}}">
-                      <div class="panel-body">
-                        <p>{{item.content-p1}}</p>
-                        <p>{{item.content-p2}}</p>
-                      </div>
-                    </div>
-                  </div>
-                  {% endfor %}
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="content-box box-primary">
-                            <span class="icon-ar icon-ar-lg icon-ar-inverse icon-ar-white">
-                            <i class="fa {{page.experience-box1-icon}}"></i></span>
-                            <h5 class="content-box-title">{{page.experience-box1-header}}</h5>
-                            <p>{{page.experience-box1-description}}</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="content-box box-primary">
-                            <span class="icon-ar icon-ar-lg icon-ar-inverse icon-ar-white">
-                            <i class="fa {{page.experience-box2-icon}}"></i></span>
-                            <h5 class="content-box-title">{{page.experience-box2-header}}</h5>
-                            <p>{{page.experience-box2-description}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-       </div>
+          <div class="col-md-12">
+              <h2 class="right-line no-margin-top">Our experience</h2>
+          </div>
+          <div class="col-md-4">
+              <h2 class="no-margin-top">Food and beverages</h2>
+              <ul>
+                  <li><h4>Batch make</h4></li>
+                  <li><h4>Continuous pack</h4></li>
+                  <li><h4>Tank management</h4></li>
+                  <li><h4>Close coupled production</h4></li>
+                  <li><h4>Rate balancing</h4></li>
+                  <li><h4>Floating bottlenecks</h4></li>
+                  <li><h4>Run buffers</h4></li>
+                  <li><h4>Multi-attribute changeovers</h4></li>
+                  <li><h4>Extensive cleaning rules</h4></li>
+                  <li><h4>Shelf life control</h4></li>
+              </ul>
+              <h2 class="no-margin-top">Port logistics</h2>
+              <ul>
+                  <li><h4>Turn of arrival servicing</h4></li>
+                  <li><h4>Tidal restrictions</h4></li>
+                  <li><h4>Demurrage/despatch</h4></li>
+                  <li><h4>Safe water limitations</h4></li>
+                  <li><h4>Concurrent movements</h4></li>
+                  <li><h4>Vessel type impact on movements</h4></li>
+                  <li><h4>Partial loads</h4></li>
+              </ul>
+          </div>
+          <div class="col-md-4">
+              <h2 class="no-margin-top">General manufacturing</h2>
+              <ul>
+                  <li><h4>Make to order</h4></li>
+                  <li><h4>Engineer to order</h4></li>
+                  <li><h4>Floor stock</h4></li>
+                  <li><h4>Sub-assemblies</h4></li>
+                  <li><h4>Work bays</h4></li>
+                  <li><h4>Flexible staffing</h4></li>
+                  <li><h4>Skills</h4></li>
+                  <li><h4>Tooling</h4></li>
+                  <li><h4>Wip management</h4></li>
+                  <li><h4>Mid route sequence changes</h4></li>
+                  <li><h4>Priority management</h4></li>
+              </ul>
+              <h2 class="no-margin-top">Timber milling</h2>
+              <ul>
+                  <li><h4>Log yards</h4></li>
+                  <li><h4>Green milling</h4></li>
+                  <li><h4>Kilns</h4></li>
+                  <li><h4>Dry milling</h4></li>
+                  <li><h4>Fall down matrices</h4></li>
+                  <li><h4>Co-products</h4></li>
+              </ul>
+          </div>
+          <div class="col-md-4">
+              <h2 class="no-margin-top">Pharmaceuticals</h2>
+              <ul>
+                  <li><h4>Batch management</h4></li>
+                  <li><h4>Lot tracking</h4></li>
+                  <li><h4>Quality assurance</h4></li>
+                  <li><h4>Temporal constraints</h4></li>
+              </ul>
+              <h2 class="no-margin-top">Mining logistics</h2>
+              <ul>
+                  <li><h4>Stockpile management</h4></li>
+                  <li><h4>Co-products</h4></li>
+                  <li><h4>Conversion losses</h4></li>
+                  <li><h4>Fixed timetables</h4></li>
+                  <li><h4>Weather events</h4></li>
+                  <li><h4>Blending</h4></li>
+                  <li><h4>Assays</h4></li>
+              </ul>
+              <h2 class="no-margin-top">Labour services</h2>
+              <ul>
+                  <li><h4>Match labour to jobs based on skills</h4></li>
+                  <li><h4>Plan crews to jobs</h4></li>
+                  <li><h4>Availability management</h4></li>
+                  <li><h4>Labour re-assignment</h4></li>
+                  <li><h4>Fatigue management</h4></li>
+              </ul>
+          </div>
+      </div>
    </section>
 </div>
