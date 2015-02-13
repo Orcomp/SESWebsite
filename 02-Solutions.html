@@ -1,0 +1,129 @@
+---
+layout: default
+title: Solutions
+permalink: /solutions/
+solutions-header: "Simulation and Scheduling"
+solutions-subheader: "Our Solutions"
+solutions:
+    - header: "Rantt"
+      image: "/img/solutions/Rt.png"
+      iconImage: "/img/solutions/RtIcon.png"
+      description1: "<li><h4>Automatically displays time stamped data in a graphical format</h4></li>"
+      description2: "<li><h4>Reveals the temporal relationships between events</h4></li>"
+      description3: ""
+      description4: ""
+      description5: ""
+    - header: "Scheduling Assistant"
+      image: "/img/solutions/Sa.png"
+      iconImage: "/img/solutions/SaIcon.png"
+      description1: "<li><h4>Allows a scheduler to quickly inject their judgement when creating a schedule.</h4></li>"
+      description2: "<li><h4>Automatically does the hard work of putting the schedule together</h4></li>"
+      description3: "<li><h4>Helps the scheduler to focus on the quality of the schedule</h4></li>"
+      description4: ""
+      description5: ""
+    - header: "Data Validator"
+      image: "/img/solutions/Dv.png"
+      iconImage: "/img/solutions/DvIcon.png"
+      description1: "<li><h4>Automatically checks data integrity within and between files</h4></li>"
+      description2: "<li><h4>Runs fast enough to call every time you import data</h4></li>"
+      description3: "<li><h4>Simple scripting language for validation rules</h4></li>"
+      description4: "<li><h4>Acts as live integration documentation</h4></li>"
+      description5: ""
+    - header: "Rule Validator"
+      image: "/img/solutions/Rv.png"
+      iconImage: ""
+      description1: "<li><h4>Captures rules and ‘tribal’ knowledge</h4></li>"
+      description2: "<li><h4>Checks schedules for rule compliance</h4></li>"
+      description3: "<li><h4>Provides warnings when rules are violated</h4></li>"
+      description4: "<li><h4>Runs fast enough to call every time a schedule is generated</h4></li>"
+      description5: ""
+    - header: "Link Explorer"
+      image: "/img/solutions/Le.png"
+      iconImage: "/img/solutions/LeIcon.png"
+      description1: "<li><h4>Works with supply and demand links (pegs)</h4></li>"
+      description2: "<li><h4>Display and easily navigate links</h4></li>"
+      description3: "<li><h4>Highlights supply / demand shortages and timing issues</h4></li>"
+      description4: ""
+      description5: ""
+    - header: "Stock Levels"
+      image: "/img/solutions/Sl.png"
+      iconImage: "/img/solutions/SlIcon.png"
+      description1: "<li><h4>Automatically displays plots of time stamped values</h4></li>"
+      description2: "<li><h4>Allows quick filtering of plots to focus on what's important</h4></li>"
+      description3: "<li><h4>Provides pattern analysis using totals and overlays</h4></li>"
+      description4: ""
+      description5: ""
+    - header: "Flex Grid"
+      image: "/img/solutions/Fg.png"
+      iconImage: "/img/solutions/FgIcon.png"
+      description1: "<li><h4>User friendly interface for reviewing csv files</h4></li>"
+      description2: "<li><h4>Quickly format data the way you want</h4></li>"
+      description3: "<li><h4>Easy filters to focus on what's important</h4></li>"
+      description4: "<li><h4>File chooser for frequent files</h4></li>"
+      description5: "<li><h4>Workspaces to save settings for each file</h4></li>"
+    - header: "APS Engine"
+      image: "/img/solutions/Aps.png"
+      iconImage: ""
+      description1: "<li><h4>Creates schedules based on rules and constraints</h4></li>"
+      description2: "<li><h4>Allows creation of custom rules for client specific solutions</h4></li>"
+      description3: "<li><h4>Able to schedule 1 million operations in just a few seconds</h4></li>"
+      description4: ""
+      description5: ""
+
+---
+<style>
+  .solutions h4 {
+    color:rgb(102, 102, 102);
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+</style>
+
+<header class="main-header">
+    <div class="container">
+        <h1 class="page-title">{{page.title}}</h1>
+
+        <ol class="breadcrumb pull-right">
+            <li><a href="{{ site.url }}">Home</a></li>
+            <li class="active">{{page.title}}</li>
+        </ol>
+    </div>
+</header>
+<div class="container solutions">
+    <section class="margin-bottom">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="slogan text-center margin-bottom"><span>{{page.solutions-header}}</span> </br>
+                {{page.solutions-subheader}}</p>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            {% for solutions in page.solutions %}
+                <div>
+                  <h2 class="post-title">{{solutions.header}}</h2>
+                  <div class="row">
+                      <div class="col-lg-6">
+                          <a class="thumbnail pull-left" href="#">
+                            <img class="media-object" src="{{ solutions.image prepend: site.url}}" alt="...">
+                          </a>
+                      </div>
+                      <div class="col-lg-6 post-content">
+                          <div class="panel-body" style="padding:0px;">
+                              <img style="width: 100px; margin-left:30px; margin-top:0px; margin-bottom:10px; height: 100px;" src="{{ solutions.iconImage prepend: site.url}}" alt="">
+                              <ul>
+                                  {{solutions.description1}}
+                                  {{solutions.description2}}
+                                  {{solutions.description3}}
+                                  {{solutions.description4}}
+                                  {{solutions.description5}}
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+   </section>
+</div>
