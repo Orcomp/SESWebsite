@@ -4,15 +4,15 @@ header-services:
     - title: "Advanced Planning and Scheduling Solutions"
       icon: "fa-globe"
       delay: 5
-    - title: "High-speed servers and performance"
+    - title: "Simple solutions for complex business problems"
       icon: "fa-tachometer"
       delay: 8
-    - title: "Lorem ipsum dolor sit amet consectetur"
+    - title: "Advice and assistance with business process refinements"
       icon: "fa-cloud"
       delay: 11
-header-title: "At the Vanguard of Innovation"
-header-description: "Phasellus viverra nulla ut metus varius laoreet rutrum. Aenean imperdiet etiam ultricies nisi vel augue."
-services-button-title: "Learn More"
+header-title: "At the Vanguard of Planning and Scheduling"
+header-description: "We provide consulting services to help our clients to clarify, design, develop and implement simple solutions to complex business problems."
+services-button-title: "Our Solutions"
 features-title: "What do we do?"
 features:
     - title: "Cloud Computing"
@@ -33,20 +33,19 @@ features:
     - title: "Mobile and Tablet Apps"
       description: "Praesentium cumque voluptate harum quae doloribus, atque error debitis, amet velit in similique, necessitatibus odit vero sunt."
       icon: "fa-tablet"
-# create a page with icon list for Andrew
 ---
 <header class="services-header">
     <div class="primary-dark-div">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <div class="service-header-text text-center center-block">
                         <h1 class="animated fadeInDown animation-delay-2">{{page.header-title}}</h1>
                         <p class="animated fadeInDown animation-delay-5">{{page.header-description}}</p>
                         <p class="animated fadeInDown animation-delay-8"><a href="{{ "/services" | prepend: site.url }}" class="btn btn-ar btn-primary btn-lg">{{page.services-button-title}}</a></p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-7">
                     <ul class="services-header-list">
                         {% for service in page.header-services %}
                         <li class="animated fadeInUp animation-delay-{{service.delay}}"><a href="#"><i class="fa {{service.icon}}"></i> {{service.title}}</a></li>
@@ -58,6 +57,27 @@ features:
     </div>
 </header>
 
+<div class="container margin-bottom">
+  <p class="slogan text-center"><span>Simply Effective Solutions Pty Limited</span><br>
+  is an Australian company formed in 2014 to empower our clients by creating simple solutions to complex business problems. </p>
+  <div>
+    <p><strong>SES</strong> specialises in the area of Advanced Planning and Scheduling.</p>
+  </div>
+  <div>
+    <p>We provide consulting services to help our clients to clarify, design, develop and implement simple solutions to what are often complex business problems.</p>
+  </div>
+  <div>
+    <p>As well as helping implement the technology portion of the solution, we work closely with our clients to provide advice and assistance with business process refinements and managing the cultural change that goes along with implementing new solutions.</p>
+  </div>
+  <div>
+    <p>For the information technology portion of our solutions we use products developed by 
+    <a href="http://www.wildgums.com">Wild Gums</a>, another Australian company that is at the vanguard of developing software that empowers their end users by being fast, simple to use and functionally rich.</p>
+  </div>
+  <div>
+    <p>Many Wild Gums products are ready to use off the shelf, however some are also able to be extended if required in order to meet very specific client needs. Wild Gums Advanced Planning Engine is a great example of this.</p>
+  </div>
+</div>
+<!--
 <div class="container">
     <section class="margin-bottom">
         <div class="row">
@@ -78,3 +98,4 @@ features:
         </div>
     </section>
 </div>
+-->
