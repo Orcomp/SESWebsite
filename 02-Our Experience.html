@@ -1,0 +1,109 @@
+---
+layout: default
+title: Our Experience
+permalink: /experience/
+experience-header: "Simulation and Scheduling"
+experience-subheader: "Our experience"
+experience-list-title: "experience"
+experience:
+    - description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil suscipit cupiditate expedita hic earum vero sint, recusandae itaque, rem distinctio."
+    - description: "Totam porro sit, obcaecati quos quae iure tenetur, soluta voluptatem sapiente rerum ipsam delectus corporis voluptates voluptate, nulla mollitia pariatur."
+    - description: "Amet dolorum ullam, rerum ratione distinctio, quia iusto rem! Asperiores et quas, ratione in dolores dolorum doloribus magni suscipit labore!"
+    - description: "Enim quas nesciunt sequi odit, ut quisquam vitae commodi animi placeat nihil saepe magnam aliquam, vero harum quae doloribus aut nostrum veniam alias!"
+    - description: "Expedita doloribus vel nam fuga iusto aperiam maxime aut amet pariatur. Libero quidem, optio itaque ducimus. Nulla laboriosam voluptas voluptates."
+accordion:
+    - title: "Talent and creativity"
+      icon: "fa-lightbulb-o"
+      id: "collapseOne"
+      collapse: "collapse in"
+      content-p1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati molestiae id ipsum ipsa repudiandae. Voluptatum, molestias, quas magnam repellat quos facilis sequi. Ullam optio eius deleniti dolore quasi doloribus ipsam incidunt perferendis."
+      content-p2: "Dolores, corrupti, laborum, officia sit aliquam doloremque accusantium nemo sunt veniam est incidunt perferendis minima obcaecati ex aperiam voluptatibus blanditiis eum suscipit magnam dolorum."
+    - title: "Design and code"
+      icon: "fa-desktop"
+      id: "collapseTwo"
+      collapse: "collapse"
+      content-p1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati molestiae id ipsum ipsa repudiandae. Voluptatum, molestias, quas magnam repellat quos facilis sequi. Ullam optio eius deleniti dolore quasi doloribus ipsam incidunt perferendis."
+      content-p2: "Dolores, corrupti, laborum, officia sit aliquam doloremque accusantium nemo sunt veniam est incidunt perferendis minima obcaecati ex aperiam voluptatibus blanditiis eum suscipit magnam dolorum."
+    - title: "Quality and Support"
+      icon: "fa-user"
+      id: "collapseThree"
+      collapse: "collapse"
+      content-p1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati molestiae id ipsum ipsa repudiandae. Voluptatum, molestias, quas magnam repellat quos facilis sequi. Ullam optio eius deleniti dolore quasi doloribus ipsam incidunt perferendis."
+      content-p2: "Dolores, corrupti, laborum, officia sit aliquam doloremque accusantium nemo sunt veniam est incidunt perferendis minima obcaecati ex aperiam voluptatibus blanditiis eum suscipit magnam dolorum."
+experience-box1-icon: "fa-cloud"
+experience-box1-header: "Primary Box"
+experience-box1-description: "Eveniet quo minima deserunt quisquam libero iste veritatis consectetur nulla."
+
+experience-box2-icon: "fa-group"
+experience-box2-header: "Primary Box"
+experience-box2-description: "Eveniet quo minima deserunt quisquam libero iste veritatis consectetur nulla."
+---
+<header class="main-header">
+    <div class="container">
+        <h1 class="page-title">{{page.title}}</h1>
+
+        <ol class="breadcrumb pull-right">
+            <li><a href="{{ site.url }}">Home</a></li>
+            <li class="active">{{page.title}}</li>
+        </ol>
+    </div>
+</header>
+<div class="container">
+    <section class="margin-bottom">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="slogan text-center margin-bottom"><span>{{page.experience-header}}</span> </br>
+                {{page.experience-subheader}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="no-margin-top">{{page.experience-list-title}}</h2>
+                <ol class="service-list list-unstyled">
+                    {% for service in page.experience %}
+                    <li class="wow fadeInUp animated" style="visibility: visible; -webkit-animation: undefined;">
+                        {{service.description}}
+                    </li>
+                    {% endfor %}
+                </ol>
+            </div>
+            <div class="col-md-6">
+                <div class="panel-group" id="accordion">
+                {% for item in page.accordion %}
+                  <div class="panel panel-default wow fadeInUp animated" style="visibility: visible; -webkit-animation: undefined;">
+                    <div class="panel-heading panel-heading-link">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#{{item.id}}">
+                          <i class="fa {{item.icon}}"></i> {{item.title}}
+                        </a>
+                    </div>
+                    <div id="{{item.id}}" class="panel-collapse {{item.collapse}}">
+                      <div class="panel-body">
+                        <p>{{item.content-p1}}</p>
+                        <p>{{item.content-p2}}</p>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="content-box box-primary">
+                            <span class="icon-ar icon-ar-lg icon-ar-inverse icon-ar-white">
+                            <i class="fa {{page.experience-box1-icon}}"></i></span>
+                            <h5 class="content-box-title">{{page.experience-box1-header}}</h5>
+                            <p>{{page.experience-box1-description}}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="content-box box-primary">
+                            <span class="icon-ar icon-ar-lg icon-ar-inverse icon-ar-white">
+                            <i class="fa {{page.experience-box2-icon}}"></i></span>
+                            <h5 class="content-box-title">{{page.experience-box2-header}}</h5>
+                            <p>{{page.experience-box2-description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+   </section>
+</div>
