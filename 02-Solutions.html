@@ -93,34 +93,33 @@ solutions:
     <section class="margin-bottom">
         <div class="row">
             <div class="col-md-12">
-                <p class="slogan text-center margin-bottom"><span>{{page.solutions-header}}</span> </br>
+                <p class="slogan text-center no-margin-bottom"><span>{{page.solutions-header}}</span> </br>
                 {{page.solutions-subheader}}</p>
             </div>
         </div>
         <div class="row">
           <div class="col-md-12">
             {% for solutions in page.solutions %}
-                <div>
-                  <h2 class="post-title">{{solutions.header}}</h2>
-                  <div class="row">
-                      <div class="col-lg-6">
-                          <a class="thumbnail pull-left" href="#">
-                            <img class="media-object" src="{{ solutions.image prepend: site.url}}" alt="...">
-                          </a>
-                      </div>
-                      <div class="col-lg-6 post-content">
-                          <div class="panel-body" style="padding:0px;">
-                              <img style="width: 100px; margin-left:30px; margin-top:0px; margin-bottom:10px; height: 100px;" src="{{ solutions.iconImage prepend: site.url}}" alt="">
-                              <ul>
-                                  {{solutions.description1}}
-                                  {{solutions.description2}}
-                                  {{solutions.description3}}
-                                  {{solutions.description4}}
-                                  {{solutions.description5}}
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
+                <div class="row">
+                  <hr class="dotted">
+                    <div class="col-lg-6 post-content">
+                        <div class="panel-body" style="padding:0px;">
+                            <h1><img style="width: 100px; margin-left:30px; margin-top:0px; margin-bottom:10px; height: 100px;" src="{{ solutions.iconImage prepend: site.url}}" alt="">
+                            {{solutions.header}}</h1>
+                            <ul>
+                                {{solutions.description1}}
+                                {{solutions.description2}}
+                                {{solutions.description3}}
+                                {{solutions.description4}}
+                                {{solutions.description5}}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="thumbnail pull-left" href="#">
+                          <img class="media-object" src="{{ solutions.image prepend: site.url}}" alt="...">
+                        </a>
+                    </div>
                 </div>
               {% endfor %}
             </div>
