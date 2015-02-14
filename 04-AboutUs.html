@@ -8,23 +8,30 @@ about-us-title: ""
 # Note: if you want add multiline description, use </br> as a break line symbol
 
 about-us-header: "About us"
-about-us-description-p1: "<strong>Simply Effective Solutions Pty Limited is an Australian company formed in 2014 </strong>
-                            
-                           to create simple solutions to complex business problems."
+about-us-description-p1: "Simply Effective Solutions Pty Limited is an Australian company formed in 2014 <br> to create simple solutions to complex business problems."
 about-us-description-p2: ""
 
 about-us-content-header: "We believe:"
-about-us-content-description-p1: "<li>to solve complex problems most people create complex solutions</li>"
-about-us-content-description-p2: "<li>the best solutions are the simplest ones</li>"
-about-us-content-description-p3: "<li>the more complex the problem the more it needs a simple solution</li>"
-about-us-content-description-p4: "<li>it takes creative thinking and clever technology to keep things simple</li>"
-about-us-content-description-p5: "We really enjoy helping our clients solve problems and be more productive. We get a lot of satisfaction by turning difficult and challenging problems into simple solutions that will empower and assist our clients in making better and more informed decisions quickly. 
-
-								</br></br>Keeping things simple is extremely important to us and as a result our software and our solutions are easy to use, fast, robust and they solve the right problems.
-                        
-								</br></br>Or to put it another way, our solutions are <strong>Simply Effective.</strong>"
+about-us-content-header1: "We really enjoy:"
+about-us-content-description-p1: "<li>To solve complex problems most people create complex solutions</li>"
+about-us-content-description-p2: "<li>The best solutions are the simplest ones</li>"
+about-us-content-description-p3: "<li>The more complex the problem the more it needs a simple solution</li>"
+about-us-content-description-p4: "<li>It takes creative thinking and clever technology to keep things simple</li>"
+about-us-content-description-p5: "<li>Helping our clients solve problems and be more productive.</li>"
+about-us-content-description-p6: "<li>Turning difficult and challenging problems into simple solutions that will empower and assist 
+our clients in making better and more informed decisions quickly.</li>"
+about-us-content-description-p7: "<li>Keeping things simple. It is extremely important to us and as a result our software and our 
+solutions are easy to use, fast, robust and they solve the right problems.</li>"
                         
 ---
+<style>
+  .about h4 {
+    color:rgb(102, 102, 102);
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+</style>
+
 <header class="main-header">
     <div class="container">
         <h1 class="page-title">{{page.title}}</h1>
@@ -36,29 +43,44 @@ about-us-content-description-p5: "We really enjoy helping our clients solve prob
     </div>
 </header>
 
-<section class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <p class="slogan text-center animated bounceInLeft animation-delay-12">{{page.about-us-title}}</p>
-            <h1 class="right-line no-margin-top">{{page.about-us-header}}</h1>
+<div class="container">
+    <section class="no-margin-bottom">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="slogan text-center margin-bottom"><span>{{page.about-us-description-p1}}</span> </br>
+                {{page.about-us-description-p2}}</p>
+                <p class="slogan text-center animated bounceInLeft animation-delay-12"><span>{{page.about-us-title}}</span></p>
+              <h2 class="right-line no-margin-top ">{{page.about-us-header}}</h2>
+            </div>
         </div>
-    </div>
-    <article>
-        <p>{{page.about-us-description-p1}}</p>
-
-        <p>{{page.about-us-description-p2}}</p>
-    </article>
-
-    <article class="row">
-        
-        <div class="col-md-6">
-            <h3>{{page.about-us-content-header}}</h3>
-            <p>{{page.about-us-content-description-p1}}</p>
-            <p>{{page.about-us-content-description-p2}}</p>
-            <p>{{page.about-us-content-description-p3}}</p>
-            <p>{{page.about-us-content-description-p4}}</p>
-            <p>{{page.about-us-content-description-p5}}</p>
+    </section>
+    <section class="margin-bottom about">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>{{page.about-us-content-header}}</h3>
+                <ul>
+                    <h4>{{page.about-us-content-description-p1}}</h4>
+                    <h4>{{page.about-us-content-description-p2}}</h4>
+                    <h4>{{page.about-us-content-description-p3}}</h4>
+                    <h4>{{page.about-us-content-description-p4}}</h4>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3>{{page.about-us-content-header1}}</h3>
+                <ul>
+                    <h4>{{page.about-us-content-description-p5}}</h4>
+                    <h4>{{page.about-us-content-description-p6}}</h4>
+                    <h4>{{page.about-us-content-description-p7}}</h4>
+                </ul>
+            </div>
         </div>
-    </article>
-</section>
+    </section>
+    <section class="margin-bottom">
+        <div class="row">
+            <div class="col-xs-12 text-center margin-bottom">
+                <p><h2>Or to put it another way, our solutions are <span>Simply Effective.</span></h2></p>
+            </div>
+        </div>
+    </section>
+</div>
 
