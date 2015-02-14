@@ -4,18 +4,31 @@ title: Contact
 permalink: /contact/
 
 contact-header: "Send Message"
-contact-description: "Lorem ipsum Ex aliqua tempor nisi laboris dolor id laborum irure minim tempor in sit dolore amet sit esse nostrud tempor nulla consequat aute in nostrud laboris sint ullamco amet nisi pariatur officia nulla pariatur in id et labore dolore ad sit."
+contact-description: ""
 
-contact-information-header: "Additional Information"
+contact-information-header: ""
 contact-information-content-header: "Contacts"
-contact-information-content-company-name: "Open Mind, Inc."
-contact-information-content-company-address: "795 Folsom Ave, Suite 600<br> San Francisco, CA 94107"
+contact-information-content-company-name: "Simply Effective Solutions Pty Limited"
+contact-information-content-company-address: "4 Correa Court, Toronto, NSW, 2300, Australia"
 # Note: if you want add multiline description, use </br> as a break line symbol.
 
-contact-information-content-company-phone: "(123) 456-7890"
-contact-information-content-company-email: "support@openmid.com"
+contact-information-content-company-phone: "+61 1300 737 500"
+contact-information-content-company-email: "contact@resourcegantt.com"
 ---
-<header class="main-header">
+<style>
+  .contact h4 {
+    color:rgb(102, 102, 102);
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .contact h3{
+    color:rgb(102, 102, 102);
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+</style>
+
+<header class="main-header no-margin-bottom">
     <div class="container">
         <h1 class="page-title">{{page.title}}</h1>
 
@@ -25,57 +38,32 @@ contact-information-content-company-email: "support@openmid.com"
         </ol>
     </div>
 </header>
+<div class="row" style="margin:13px;">
+    <iframe width="100%" height="350" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=4 Correa%2BCt%2BToronto%2BNSW%2B2283%2BAustralia&amp;ie=UTF8&amp;z=11&amp;t=m&amp;iwloc=near&amp;output=embed"></iframe>
 
-<div class="container">
-    <div class="row">
-        <iframe width="100%" height="350" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=central%2Bpark&amp;ie=UTF8&amp;z=12&amp;t=m&amp;iwloc=near&amp;output=embed"></iframe>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="section-title no-margin-top">{{page.contact-header}}</h2>
-        </div>
-        <div class="col-md-8">
-            <section>
-                <p>{{page.contact-description}}</p>
-
-                <form role="form">
-                    <div class="form-group">
-                        <label for="InputName">Name</label>
-                        <input type="email" class="form-control" id="InputName">
-                    </div>
-                    <div class="form-group">
-                        <label for="InputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="InputEmail1">
-                    </div>
-                    <div class="form-group">
-                        <label for="InputMessage">Mesagge</label>
-                        <textarea class="form-control" id="InputMessage" rows="8"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-ar btn-primary">Submit</button>
-                    <div class="clearfix"></div>
-                </form>
-            </section>
-        </div>
-
-        <div class="col-md-4">
-            <section>
-                <div class="panel panel-primary">
-                    <div class="panel-heading"><i class="fa fa-envelope-o"></i>{{page.contact-information-header}}</div>
-                    <div class="panel-body">
-                        <h4 class="section-title no-margin-top">{{page.contact-information-content-header}}</h4>
-                        <address>
-                            <strong>{{page.contact-information-content-company-name}}</strong><br>
-                            {{page.contact-information-content-company-address}}<br>
-                            <abbr title="Phone">P:</abbr>{{page.contact-information-content-company-phone}}<br>
-                            Mail: <a href="#">{{page.contact-information-content-company-email}}</a>
-                        </address>
-                    </div>
+</div>
+<div class="container contact">
+    <section class="margin-bottom">
+        <div class="row">
+            <div class="col-md-6 post-content">
+            <!--
+                <div class="panel-body">
+                    <p><h3 class="h3-section-info"> Please <a href="mailto:contact@resourcegantt.com?Subject=Trial%20License"><span class="colored"><u>email us</u></span></a> to receive a 30 day trial license.</h3></p>
                 </div>
-            </section>
+            -->
+            </div>
+
+            <div class="col-md-6 post-content">
+                <div class="panel-body">
+                    <div class="no-margin-top" style="margin-bottom:15px">
+                        <p><h3 class="right-line">{{page.contact-information-content-header}}</h3></p>
+                    </div>
+                    <p><h4><strong>{{page.contact-information-content-company-name}}</strong></h4></p>
+                    <p><h4>{{page.contact-information-content-company-address}}</h4></p>
+                    <p><h4><abbr title="Phone"></abbr>{{page.contact-information-content-company-phone}}</h4></p>
+                    <p><h4><a href="mailto:contact@resourcegantt.com?Subject=Trial%20License">{{page.contact-information-content-company-email}}</a></h4></p>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <hr class="dotted">
-
-    
+    </section>
 </div>
