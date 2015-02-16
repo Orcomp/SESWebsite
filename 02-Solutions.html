@@ -100,8 +100,8 @@ solutions:
           <div class="col-md-12">
             {% for solutions in page.solutions %}
                 <div class="row">
-                  <hr class="dotted">
-                    <div class="col-lg-6 post-content">
+                  <hr class="dotted"></hr>
+                    <div class="col-md-6 post-content">
                         <div class="panel-body" style="padding:0px;">
                             <h1><img style="width: 100px; margin-left:30px; margin-top:0px; margin-bottom:10px; height: 100px;" src="{{ solutions.iconImage prepend: site.url}}" alt="">
                             {{solutions.header}}</h1>
@@ -114,9 +114,9 @@ solutions:
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <a class="thumbnail pull-left" href="#">
-                          <img class="media-object" src="{{ solutions.image prepend: site.url}}" alt="...">
+                          <img width="650" class="media-object" src="{{ solutions.image prepend: site.url}}" alt="...">
                         </a>
                     </div>
                 </div>
