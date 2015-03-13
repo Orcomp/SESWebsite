@@ -3,11 +3,11 @@ layout: default
 title: Contact
 permalink: /contact/
 
-contact-header: "Send Message"
+contact-header: "Contact Us"
 contact-description: ""
 
 contact-information-header: ""
-contact-information-content-header: "Contacts"
+contact-information-content-header: "Contact"
 contact-information-content-company-name: "Simply Effective Solutions Pty Limited"
 contact-information-content-company-address: "4 Correa Court, Toronto, NSW, 2300, Australia"
 # Note: if you want add multiline description, use </br> as a break line symbol.
@@ -43,27 +43,30 @@ contact-information-content-company-email: "contact@sesolutions.net.au"
 
 </div>
 <div class="container contact">
+    <section class="no-margin-bottom">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="slogan text-center no-margin-bottom"><span>{{page.contact-header}}</span></p>
+            </div>
+        </div>
+    </section>
     <section class="margin-bottom">
         <div class="row">
-            <div class="col-md-6 post-content">
-            <!--
+            <div class="col-md-12 post-content">
                 <div class="panel-body">
-                    <p><h3 class="h3-section-info"> Please <a href="mailto:contact@resourcegantt.com?Subject=Trial%20License"><span class="colored"><u>email us</u></span></a> to receive a 30 day trial license.</h3></p>
-                </div>
-            -->
-            </div>
-
-            <div class="col-md-6 post-content">
-                <div class="panel-body">
-                    <div class="no-margin-top" style="margin-bottom:15px">
-                        <p><h2 class="right-line">{{page.contact-information-content-header}}</h2></p>
-                    </div>
                     <p><h4><strong>{{page.contact-information-content-company-name}}</strong></h4></p>
                     <p><h4>{{page.contact-information-content-company-address}}</h4></p>
                     <p><h4><abbr title="Phone"></abbr>{{page.contact-information-content-company-phone}}</h4></p>
                     <p><h4><a href="mailto:contact@sesolutions.net.au">{{page.contact-information-content-company-email}}</a></h4></p>
                 </div>
             </div>
+            <!--
+            <div class="col-md-6 post-content">
+                <div class="panel-body">
+                    <p><h3 class="h3-section-info"> Please <a href="mailto:contact@resourcegantt.com?Subject=Trial%20License"><span class="colored"><u>email us</u></span></a> to receive a 30 day trial license.</h3></p>
+                </div>
+            </div>
+            -->
         </div>
     </section>
 </div>
