@@ -90,40 +90,57 @@ solutions:
         </ol>
     </div>
 </header>
-<div class="container solutions">
-    <section class="margin-bottom">
+<div class="container">
+    <section class="no-margin-bottom">
         <div class="row">
             <div class="col-md-12">
                 <p class="slogan text-center margin-bottom"><span>{{page.solutions-header}}</span> </br>
                 {{page.solutions-subheader}}</p>
             </div>
         </div>
+    </section>
+</div>
+<section class="section-lines home">
+    <div class="container">
+        <div class="row solutions padding-40">
+            <div class="col-md-6">
+                <p><h4>For the software modules in our solutions we use products developed by WildGums, an Australian company at the vanguard of software development. </h4></p>
+                
+            </div>
+            <div class="col-md-6">
+                <p><h4>WildGums have developed a suite of modules that cover a wide range of functions each in its own feature rich, easy to use environment that empowers our users to make better more informed decisions.</h4></p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container margin-bottom solutions"> 
+    <section>
         <div class="row">
           <div class="col-md-12">
             {% for solutions in page.solutions %}
                 <div class="row">
                   <hr class="dotted"></hr>
-                    <div class="col-md-6 post-content">
-                        <div class="panel-body" style="padding:0px;">
-                            <h1><img style="width: 100px; margin-left:30px; margin-top:0px; margin-bottom:10px; height: 100px;" src="{{ solutions.iconImage prepend: site.url}}" alt="">
-                            {{solutions.header}}</h1>
-                            <ul>
-                                {{solutions.description1}}
-                                {{solutions.description2}}
-                                {{solutions.description3}}
-                                {{solutions.description4}}
-                                {{solutions.description5}}
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <a class="thumbnail pull-left" href="#">
-                          <img width="550" class="media-object" src="{{ solutions.image prepend: site.url}}" alt="...">
-                        </a>
-                    </div>
+                  <div class="col-md-6 post-content">
+                      <div class="panel-body" style="padding:0px;">
+                          <h1><img style="width: 100px; margin-left:30px; margin-top:0px; margin-bottom:10px; height: 100px;" src="{{ solutions.iconImage prepend: site.url}}" alt="">
+                          {{solutions.header}}</h1>
+                          <ul>
+                              {{solutions.description1}}
+                              {{solutions.description2}}
+                              {{solutions.description3}}
+                              {{solutions.description4}}
+                              {{solutions.description5}}
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <a class="thumbnail pull-left" href="#">
+                        <img width="550" class="media-object" src="{{ solutions.image prepend: site.url}}" alt="...">
+                      </a>
+                  </div>
                 </div>
               {% endfor %}
-            </div>
           </div>
+        </div>
    </section>
 </div>
