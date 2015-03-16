@@ -179,20 +179,23 @@ solutions:
 <div class="container margin-bottom solutions"> 
     <section>
         {% for solutions in page.solutions %}
+            <div class="row">
+                <div class="col-md-12 post-content ">
+                    <hr class="dotted"></hr>
+                </div>
+            </div>
             <div class="row margin-bottom">
-                <hr class="dotted"></hr>
-                <div class="col-md-2">
-                    <img style="width: 100px; height: 100px; margin-left: 80px;" src="{{ solutions.iconImage prepend: site.url}}" alt="">
+                <div class="col-md-2 push-left">
+                    <img  style="width: 100px; height: 100px;" src="{{ solutions.iconImage prepend: site.url}}" alt="">
                 </div>
                 <div class="col-md-10">
-                    <h1 class="no-margin">{{solutions.header}}</h1>
-                    <div class="no-margin">{{solutions.about}}</div>
+                    <h1 class="no-margin-top">{{solutions.header}}</h1>
+                    <div class="no-margin-top">{{solutions.about}}</div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-0 post-content "></div>
                 <div class="col-md-6 post-content ">
-                    <ul style="margin-left: 60px;">
+                    <ul style="margin-left: 15px;">
                         {{solutions.description1}}
                         {{solutions.description2}}
                         {{solutions.description3}}
