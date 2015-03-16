@@ -96,8 +96,8 @@ solutions:
       description5: "<li><h4>Extensive inbuilt logging</h4></li>"
       description6: ""
     - header: "Factory Sequencer"
-      image: "/img/solutions/Pl.png"
-      iconImage: "/img/solutions/PlIcon.png"
+      image: "/img/solutions/Fs.png"
+      iconImage: "/img/solutions/FsIcon.png"
       about: "<h4>When you just want plan the right sequence of jobs on resources our Factory sequencer is the perfect tool. Often our clients have multi step production facilities, but they just want to plan the right sequence of work on a kay resource. Once that is done correctly the rest of the facility can plan their work from the sequence on the key resource.</h4><h4>This occurs a lot in food manufacturing but is not limited to that environment. Often these clients have more than one resource that they plan this way. As long as you are just considering the sequence of jobs on a single resource at a time, independently of any other resources in your facility then Factory Sequencer is right for you.</h4><h4>Factory sequencer has lots of functionality right off the shelf: minimising changeovers, drag and drop, sort and filter to name a few. It also has modules that have been developed for specific industry sectors like beverages and timber milling. We can also create Client specific modules that plug seamlessly into the Factory Sequencer user experience to ensure it does exactly what you need for your unique facility.</h4>"
       description1: "<li><h4>Simply interactive front end to sequence work on a given resource</h4></li>"
       description2: "<li><h4>Drag and Drop to change the sequence of jobs</h4></li>"
@@ -182,39 +182,35 @@ solutions:
 </section>
 <div class="container margin-bottom solutions"> 
     <section>
-        
-        <div class="row">
-          <div class="col-md-12">
-            {% for solutions in page.solutions %}
-                <div class="row">
-                  <hr class="dotted"></hr>
-                  <div class="col-md-6 post-content ">
-                      <div class="text-icon wow fadeInUp animated" style="visibility: visible; -webkit-animation: fadeInUp;">
-                          <span  style="float: left;">
-                              <img  class="fa fa-cloud" style="width: 100px; margin-left:30px; margin-right:30px; margin-top:0px; margin-bottom:10px; height: 100px;" src="{{ solutions.iconImage prepend: site.url}}" alt="">
-                          </span>
-                          <div>
-                              <h1 class="no-margin">{{solutions.header}}</h1>
-                              <div style="margin: 20px;">{{solutions.about}}</div>
-                              <ul>
-                                  {{solutions.description1}}
-                                  {{solutions.description2}}
-                                  {{solutions.description3}}
-                                  {{solutions.description4}}
-                                  {{solutions.description5}}
-                                  {{solutions.description6}}
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-6">
-                      <a class="thumbnail pull-left" href="#">
-                        <img height="315" class="media-object" src="{{ solutions.image prepend: site.url}}" alt="...">
-                      </a>
-                  </div>
+        {% for solutions in page.solutions %}
+            <div class="row margin-bottom">
+                <hr class="dotted"></hr>
+                <div class="col-md-2">
+                    <img style="width: 100px; height: 100px; margin-left: 80px;" src="{{ solutions.iconImage prepend: site.url}}" alt="">
                 </div>
-              {% endfor %}
-          </div>
-        </div>
+                <div class="col-md-10">
+                    <h1 class="no-margin">{{solutions.header}}</h1>
+                    <div class="no-margin">{{solutions.about}}</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-0 post-content "></div>
+                <div class="col-md-6 post-content ">
+                    <ul style="margin-left: 60px;">
+                        {{solutions.description1}}
+                        {{solutions.description2}}
+                        {{solutions.description3}}
+                        {{solutions.description4}}
+                        {{solutions.description5}}
+                        {{solutions.description6}}
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <a class="thumbnail" href="#">
+                      <img height="315" class="media-object" src="{{ solutions.image prepend: site.url}}" alt="...">
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
    </section>
 </div>
