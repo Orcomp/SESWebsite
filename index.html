@@ -40,6 +40,27 @@ features:
     margin-bottom: 5px;
     margin-top: 5px;
   }
+  .services-header-list li a:hover {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.7em;
+  font-family: "Lato", "Open Sans", sans-serif;
+  font-weight: 300;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0 0 5px #000000, inset 0 0 2px rgba(255, 255, 255, 0.65);
+  -moz-box-shadow: 0 0 5px #000000, inset 0 0 2px rgba(255, 255, 255, 0.65);
+  box-shadow: 0 0 5px #000000, inset 0 0 2px rgba(255, 255, 255, 0.65);
+  border: solid 1px rgba(255, 255, 255, 0.4);
+  padding: 15px;
+  margin: 20px 0;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
 </style>
 <header class="services-header">
     <div class="primary-dark-div">
@@ -55,7 +76,7 @@ features:
                 <div class="col-md-7">
                     <ul class="services-header-list">
                         {% for service in page.header-services %}
-                        <li class="animated fadeInUp animation-delay-{{service.delay}}"><a href="#"><i class="fa {{service.icon}}"></i> {{service.title}}</a></li>
+                        <li class="animated fadeInUp animation-delay-{{service.delay}}"><a><i class="fa {{service.icon}}"></i> {{service.title}}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
