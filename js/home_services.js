@@ -10,7 +10,7 @@ $(document).ready(function(){
         prevSelector: '#bx-prev4',
         nextText: '>',
         prevText: '<',
-      })
+      });
 
     $('#home-block').bxSlider({
         hideControlOnEnd: true,
@@ -22,7 +22,7 @@ $(document).ready(function(){
         prevSelector: '#bx-prev5',
         nextText: '>',
         prevText: '<',
-      })
+      });
 
     var myCircle1 = Circles.create({
         id:         'circles-1',
@@ -35,7 +35,7 @@ $(document).ready(function(){
         duration:   1000,
         wrpClass:   'circles-wrp',
         textClass:  'circles-text'
-    })
+    });
 
     var myCircle2 = Circles.create({
         id:         'circles-2',
@@ -48,7 +48,7 @@ $(document).ready(function(){
         duration:   1000,
         wrpClass:   'circles-wrp',
         textClass:  'circles-text'
-    })
+    });
 
     var myCircle3 = Circles.create({
         id:         'circles-3',
@@ -61,7 +61,7 @@ $(document).ready(function(){
         duration:   1000,
         wrpClass:   'circles-wrp',
         textClass:  'circles-text'
-    })
+    });
 
     var myCircle4 = Circles.create({
         id:         'circles-4',
@@ -74,5 +74,5 @@ $(document).ready(function(){
         duration:   1000,
         wrpClass:   'circles-wrp',
         textClass:  'circles-text'
-    })
+    });
 });

@@ -10,7 +10,7 @@ $(document).ready(function(){
         prevSelector: '#bx-prev4',
         nextText: '>',
         prevText: '<',
-    })
+    });
 
     $('#home-block').bxSlider({
         hideControlOnEnd: true,
@@ -22,5 +22,5 @@ $(document).ready(function(){
         prevSelector: '#bx-prev5',
         nextText: '>',
         prevText: '<',
-    })
+    });
 });

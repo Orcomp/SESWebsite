@@ -5,7 +5,7 @@ $(document).ready(function(){
         hideControlOnEnd: true,
         captions: true,
         pager: false
-    })
+    });
 
     $('#bx3').bxSlider({
         hideControlOnEnd: true,
@@ -18,7 +18,7 @@ $(document).ready(function(){
         prevSelector: '#bx-prev',
         nextText: '>',
         prevText: '<'
-      })
+      });
 
     $('#bx4').bxSlider({
         hideControlOnEnd: true,
@@ -31,7 +31,7 @@ $(document).ready(function(){
         prevSelector: '#bx-prev4',
         nextText: '>',
         prevText: '<',
-    })
+    });
 
     $('#bx5').bxSlider({
         minSlides: 2,
@@ -43,5 +43,5 @@ $(document).ready(function(){
         speed: 12000,
         tickerHover: true,
         useCSS: false
-    })
+    });
 });
