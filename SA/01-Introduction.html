@@ -1,0 +1,57 @@
+---
+layout: sa_default
+sa_title: Introduction
+permalink: /products/SA/
+solutions-header: ""
+solutions-subheader: ""
+solutions:
+    - header: "Scheduling Assistant"
+      image: "/img/solutions/Sa.png"
+      iconImage: "/img/solutions/SaIcon.png"
+      about: "<h4>Scheduling Assistant provides the user with extended information about all the operations that need to be scheduled.</h4><h4>The user then simply selects the sequence they need given today’s circumstances and the assistant does the rest.</h4>"
+      description1: "<li><h4>Allows a scheduler to quickly inject their judgement when creating a schedule</h4></li>"
+      description2: "<li><h4>Automatically does the hard work of putting the schedule together</h4></li>"
+      description3: "<li><h4>Helps the scheduler to focus on the quality of the schedule</h4></li>"
+      description4: ""
+      description5: ""
+      description6: ""
+---
+<style>
+  .solutions h4 {
+    color:rgb(102, 102, 102);
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+</style>
+
+<div class="container margin-bottom margin-top solutions"> 
+    <section>
+        {% for solutions in page.solutions %}
+            <div class="row margin-bottom">
+                <div class="col-md-1"></div>
+                <div class="col-md-11">
+                    <h1 class="no-margin-top">{{solutions.header}}</h1>
+                    <div class="no-margin-top">{{solutions.about}}</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1 post-content"></div>
+                <div class="col-md-5 post-content">
+                    <ul style="margin-left:20px;">
+                        {{solutions.description1}}
+                        {{solutions.description2}}
+                        {{solutions.description3}}
+                        {{solutions.description4}}
+                        {{solutions.description5}}
+                        {{solutions.description6}}
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <a class="thumbnail" href="#">
+                      <img height="315" class="media-object" src="{{ solutions.image prepend: site.url}}" alt="...">
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+   </section>
+</div>
