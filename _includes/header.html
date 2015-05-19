@@ -1,16 +1,55 @@
 <header id="header-full-top" class="hidden-xs header-full">
     <div class="container">
-      <img src="{{ "/img/colors/blue/logo_big.png" | prepend: site.url }}" style="height:60px; margin:10px"/>
+      <img src="{{ "/img/colors/blue/logo_big.png" | prepend: site.url }}" style="height:55px; margin:10px"/>
     </div> <!-- container -->
-    <style>
+    <style type="text/css">
         @media (min-width: 979px) {
             ul.nav li.dropdown:hover > ul.dropdown-menu {
             display: block;
             }
         }
+        
+        .products {
+            background: rgba(40, 88, 110, 0.93);
+            padding: 40px 40px 38px;
+        }
+        
+        .product h4 {
+            height: 50px;
+            color: white;
+            font-weight: normal;
+            font-size: 13pt;
+        }
+        
+        .product img {
+            height: 65px;
+            opacity: 0.85;
+        }
+
+        .product:hover img {
+            height: 65px;
+            opacity: 1;
+        }
+
+        .product:hover a {
+            background: transparent;
+        }
+
+        .product:hover h4 {
+            height: 50px;
+            color: white;
+            font-weight: normal;
+            font-size: 13pt;
+            text-shadow: 0 0 0.05em white;
+        }
+
+        .product ul li a:hover {
+            background: transparent;
+            color: transparent;
+        }
     </style>
 </header>
-<nav class="navbar navbar-static-top navbar-default navbar-header-full " role="navigation" id="header">
+<nav class="navbar navbar-static-top navbar-default navbar-header-full yamm navbar-light" role="navigation" id="header">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -41,7 +80,106 @@
                         {% endfor %}
                     </ul>
                 </li>
-                
+                                <li class="dropdown yamm-fw">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Products</a>
+                     <ul class="dropdown-menu dropdown-menu-left products">
+                        <li>
+                            <div class="yamm-content">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-6 col-sm-6">
+                                        <div class="megamenu-block text-center product">
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><img src="http://www.sesolutions.net.au/img/solutions/SaIcon.png"></a>
+                                                </li>
+                                            </ul>
+                                            <h4>Scheduling Assistant</h4>
+                                        </div>
+                                        <div class="megamenu-block text-center product">
+                                            <ul>
+                                                <li>
+                                                    <a href="{{ "/products/SA/" | prepend: site.url }}"><img src="http://www.sesolutions.net.au/img/solutions/SaIcon.png"></a>
+                                                </li>
+                                            </ul>
+                                            <h4>Rantt</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-6 col-sm-6">
+                                        <div class="megamenu-block text-center product">
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><img src="http://www.sesolutions.net.au/img/solutions/SlIcon.png"></a>
+                                                </li>
+                                            </ul>
+                                            <h4>Stock Levels</h4>
+                                        </div>
+                                        <div class="megamenu-block text-center product">
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><img src="http://www.sesolutions.net.au/img/solutions/AzIcon.png"></a>
+                                                </li>
+                                            </ul>
+                                            <h4>Analyzer</h4>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-2 col-md-6 col-sm-6">
+                                        <div class="megamenu-block text-center product">
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><img src="http://www.sesolutions.net.au/img/solutions/PlIcon.png"></a>
+                                                </li>
+                                            </ul>
+                                            <h4>Planner</h4>
+                                        </div>
+                                        <div class="megamenu-block text-center product">
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><img src="http://www.sesolutions.net.au/img/solutions/LeIcon.png"></a>
+                                                </li>
+                                            </ul>
+                                            <h4>Link Explorer</h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-2 col-md-6 col-sm-6">
+                                        <div class="megamenu-block text-center product">
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><img src="http://www.sesolutions.net.au/img/solutions/DvIcon.png"></a>
+                                                </li>
+                                            </ul>
+                                            <h4>Data Validator</h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-2 col-md-6 col-sm-6">
+                                        <div class="megamenu-block text-center product">
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><img src="http://www.sesolutions.net.au/img/solutions/FgIcon.png"></a>
+                                                </li>
+                                            </ul>
+                                            <h4>Flex Grid</h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-2 col-md-6 col-sm-6">
+                                        <div class="megamenu-block text-center product">
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><img src="http://www.sesolutions.net.au/img/solutions/FsIcon.png"></a>
+                                                </li>
+                                            </ul>
+                                            <h4>Factory Sequencer</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
                 {% for page in site.pages %}
                   {% if page.title %}
                     <li>
