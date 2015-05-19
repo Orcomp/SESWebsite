@@ -1,0 +1,31 @@
+<style type="text/css">
+    .navbar-dark {
+      background-color: #28586E;
+      background-image: none;
+      color: #fff;
+      box-shadow: none;
+    }
+</style>
+<nav class="navbar navbar-static-top navbar-default navbar-header-full yamm navbar-dark" role="navigation" id="header" style="z-index: 998; important!" >
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <img src="http://www.sesolutions.net.au/img/solutions/SaIcon.png" style="width:45px; margin:2px 2px 2px 0px;">
+            <h4 style="float:right; color:white; margin:12px;">Scheduling Assistant</h4>
+        </div> <!-- navbar-header -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+        <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                {% for page in site.pages %}
+                  {% if page.sa_title %}
+                    <li>
+                        <a href="{{ page.url | prepend: site.url }}">{{ page.sa_title }}</a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+             </ul>
+        </div><!-- navbar-collapse -->
+    </div><!-- container -->
+</nav>
